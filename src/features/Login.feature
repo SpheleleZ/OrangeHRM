@@ -6,7 +6,7 @@ Feature: OrangeHRM login Page
     Then Verify user login page is open
 
   @SmokeTest
-  Scenario Outline:
+  Scenario Outline: Testing if User can login successfully
     When Users enters <username> and <password>
     And Click on login button
     Then verify user logged in successfully

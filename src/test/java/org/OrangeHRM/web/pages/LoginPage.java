@@ -29,10 +29,6 @@ public class LoginPage {
     @CacheLookup
     WebElement verifyLoginForm;
 
-    @FindBy(xpath = "//i[text()=\"oxd_home_menu\"]")
-    @CacheLookup
-    WebElement verifyHomePage;
-
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         waitHelper = new WaitHelper(driver);
@@ -58,10 +54,5 @@ public class LoginPage {
     public boolean verifyLoginPage() {
         waitHelper.waitForElement(verifyLoginForm, 20);
         return verifyLoginForm.isDisplayed();
-    }
-
-    public boolean verifyHomePage(){
-        waitHelper.waitForElement(verifyHomePage,20);
-        return verifyHomePage.isDisplayed();
     }
 }
