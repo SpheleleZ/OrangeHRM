@@ -7,7 +7,6 @@ Feature: OrangeHRM Home Page
     When User enters "Admin" and "Nok2lasphe"
     Then User Click on Login button
 
-  @SmokeTest
   Scenario: Testing OrangeHRM Home page
     Then verify Home Page is open
     And Close the browser
