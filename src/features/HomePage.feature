@@ -3,10 +3,15 @@ Feature: OrangeHRM Home Page
   Background:
     Given Browser is launched
     And User login "https://sphelele101-trials711.orangehrmlive.com/auth/login" page is open
-    Then Validate user login page
-    When User enters "Admin" and "Nok2lasphe"
-    Then User Click on Login button
+    Then Verify user login page is open
 
-  Scenario: Testing OrangeHRM Home page
-    Then verify Home Page is open
+  @SmokeTest
+  Scenario Outline: Testing OrangeHRM Home page
+    When Users enters <username> and <password>
+    And Click on login button
+    Then verify user logged in successfully
     And Close the browser
+
+    Examples:
+      | username | password   |
+      | Admin    | Nok2lasphe |
