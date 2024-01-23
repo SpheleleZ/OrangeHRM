@@ -29,6 +29,10 @@ public class LoginPage {
     @CacheLookup
     WebElement verifyLoginForm;
 
+    @FindBy(id = "toast-container")
+    @CacheLookup
+    WebElement verifyInvalidCredentials;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         waitHelper = new WaitHelper(driver);
@@ -54,5 +58,10 @@ public class LoginPage {
     public boolean verifyLoginPage() {
         waitHelper.waitForElement(verifyLoginForm, 20);
         return verifyLoginForm.isDisplayed();
+    }
+
+    public boolean verifyInvalidCredentials(){
+        waitHelper.waitForElement(verifyInvalidCredentials,20);
+        return verifyInvalidCredentials.isDisplayed();
     }
 }
