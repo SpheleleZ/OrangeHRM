@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="40.221" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="OrangeHRM Home Page" name="Testing OrangeHRM Home page - Example #1.1" time="20.498">
+<testsuite name="Cucumber" time="35.054" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="OrangeHRM login Page" name="Testing if User can login successfully - Example #1.1" time="23.071">
 <system-out><![CDATA[
 Given Browser is launched...................................................passed
 And User login "https://sphelele101-trials711.orangehrmlive.com/auth/login" page is open.passed
@@ -11,14 +11,14 @@ Then verify user logged in successfully.....................................pass
 And Close the browser.......................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="OrangeHRM login Page" name="Testing if User can login successfully - Example #1.1" time="19.499">
+<testcase classname="OrangeHRM login Page" name="Testing if user enters invalid credentials - Example #1.1" time="11.726">
 <system-out><![CDATA[
 Given Browser is launched...................................................passed
 And User login "https://sphelele101-trials711.orangehrmlive.com/auth/login" page is open.passed
 Then Verify user login page is open.........................................passed
-When Users enters Admin and Nok2lasphe......................................passed
+When Users enters Admi and Nok2lsphe........................................passed
 And Click on login button...................................................passed
-Then verify user logged in successfully.....................................passed
+Then verify user entered invalid credentials................................passed
 And Close the browser.......................................................passed
 ]]></system-out>
 </testcase>

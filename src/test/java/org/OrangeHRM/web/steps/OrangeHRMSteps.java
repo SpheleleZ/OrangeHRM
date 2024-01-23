@@ -59,6 +59,16 @@ public class OrangeHRMSteps extends BaseTest {
         homePage = loginPage.setLoginButton();
     }
 
+    /* ***************************************************************************
+     * Login Page Steps
+     * ***************************************************************************
+     */
+
+    @Then("verify user entered invalid credentials")
+    public void verify_user_entered_invalid_credentials() {
+        assertTrue(loginPage.verifyInvalidCredentials(),"Invalid Credentials page not open");
+    }
+
     /* *******************************************************************************
      * Home Page Steps
      * *******************************************************************************

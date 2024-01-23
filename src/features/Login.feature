@@ -14,3 +14,13 @@ Feature: OrangeHRM login Page
     Examples:
       | username | password   |
       | Admin    | Nok2lasphe |
+
+  @SmokeTest
+  Scenario Outline: Testing if user enters invalid credentials
+    When Users enters <username> and <password>
+    And Click on login button
+    Then verify user entered invalid credentials
+    And Close the browser
+    Examples:
+      | username | password  |
+      | Admi     | Nok2lsphe |
